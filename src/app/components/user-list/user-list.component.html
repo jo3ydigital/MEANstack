@@ -1,0 +1,71 @@
+<div class="container">
+  <!-- No data message -->
+  <div *ngIf="User.length <= 0" class="no-data">
+    <div>There are no users yet!</div>
+    <div><a class="btn btn-no-data" routerLink="/create-user">Create User</a></div>
+  </div>
+
+  <!-- Search -->
+  <div class="search-container" *ngIf="User.length > 0">
+    <div class="search">
+      <span>Search: </span>
+      <input class="search" id="searchTerm" (keyup)="searchTerm$ = $event.target.value; searchUser();" class="form-control"  style="width: 150px; text-align: center;" placeholder="Search User" autofocus>
+      <span>&nbsp;&nbsp;by field: </span>
+      <div class="select-wrapper">
+        <select id="searchField" (change)="getSearchField($event.target.value); searchUser();">
+          <option value="name" selected>Name</option>
+          <option value="email">Email</option>
+          <option value="role">Role</option>
+          <option value="phoneNumber">Phone No</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="line" *ngIf="User.length > 0"></div>
+
+  <!-- Search Results-->
+  <div class="search_results" *ngIf="search_results_count <= 0">
+    no results found for "<span>{{ searchTerm$ }}</span>"
+  </div>
+
+  <div class="search_results" *ngIf="search_results_count > 0 && searchTerm$">
+    <div *ngIf="search_results_count == 1">
+      {{ search_results_count }} result found for "<span>{{ searchTerm$ }}</span>"
+    </div>
+    <div *ngIf="search_results_count > 1">
+      {{ search_results_count }} results found for "<span>{{ searchTerm$ }}</span>"
+    </div>
+  </div>
+
+  <!-- User list -->
+  <table class="table table-bordered" *ngIf="User.length > 0 && show_db_data">
+    <thead class="table-success">
+      <tr>
+        <th scope="col">User ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Role</th>
+        <th scope="col">Phone No</th>
+        <th scope="col center">Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let User of User; let i = index">
+        <th scope="row">{{User._id}}</th>
+        <td>{{User.name | titlecase}}</td>
+        <td>{{User.email}}</td>
+        <td>{{User.role}}</td>
+        <td>{{User.phoneNumber}}</td>
+        <td class="text-center edit-block">
+          <span class="edit" [routerLink]="['/edit-user/', User._id]">
+            <button type="button" class="btn btn-success btn-sm">Edit</button>
+          </span>
+          <span class="delete" (click)="removeUser(User, i)">
+            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

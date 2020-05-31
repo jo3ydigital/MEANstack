@@ -1,0 +1,71 @@
+.footer {
+    position: absolute; position: fixed;
+    z-index: 999;
+    bottom: 0;
+    width: 100%;
+  
+    .topline {
+      bottom: 0;
+      z-index: 5;
+      margin: 75px 0 20px 0;
+      width: 100%; height: 0px;
+      border-top: 1px solid #DDDDDD;
+    }
+  }
+  .bg {
+    position: absolute; z-index: 0;
+    bottom: 0;
+    width: 100%; height: 55px;
+    background-color: #EEEEEE; background-color: #F4F4F4;
+  }
+  
+  .footer p {
+    position: relative; z-index: 5;
+    text-align: center;
+    font-family: "Myriad Pro", "Trebuchet MS", arial, sans-serif;
+    font-size: 0.85em;
+    color: #AAAAAA; color: #A3A3A5;
+  }
+  
+  .footer .much-heart {
+    display: inline-block;
+    position: relative; z-index: 5;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    background: #AC1D3F;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .footer .much-heart::before,
+  .footer .much-heart::after {
+    content: '';
+    position: absolute;
+    display: block;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    background: #AC1D3F;
+    top: -4px; }
+  
+  .footer .much-heart::after {
+    top: auto;
+    bottom: 0;
+    left: -4px;
+  }
+  
+  .footer a {
+    color: #AAAAAA; color: #A3A3A5;
+    text-decoration: none;
+    font-weight: bold;
+  }
