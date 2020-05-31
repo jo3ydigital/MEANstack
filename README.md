@@ -1,10 +1,7 @@
-# mean-stack-angular-7-crud-app-example
-A step by step  MEAN Stack Tutorial from which you will learn to build Angular 7 CRUD App with Bootstrap 4, MongoDB, NodeJS and Express JS from scratch.
+# MEAN stack CRUD app
+A MEAN Stack CRUD App using Bootstrap 4, MongoDB, NodeJS, Express JS and Mongoose.
 
-This project was built with Angular CLI version 7.2.3.
-
-Step by step article on [MEAN Stack Tutorial – Angular 7 CRUD App with Bootstrap 4
-](https://www.positronx.io/mean-stack-tutorial-angular-7-crud-bootstrap/)
+View my [MEAN Stack Tutorial](https://www.joeydigital.net/code/js/post?id=889)
 
 ## How to run the app?
 - Run `npm install` to install required dependencies.
