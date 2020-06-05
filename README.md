@@ -1,7 +1,7 @@
 # MEAN stack CRUD app
 A MEAN Stack CRUD App using Bootstrap 4, MongoDB, NodeJS, Express JS and Mongoose.
 
-View my [MEAN Stack Tutorial](https://www.joeydigital.net/code/js/post?id=889)
+View my [MEAN Stack Tutorial](https://www.joeydigital.net/code/js/post?id=183)
 
 ## How to run the app?
 - Run `npm install` to install required dependencies.
